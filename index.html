@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,294 +11,183 @@
 
 <body>
 
-    <!-- Header -->
-    <header class="site-header">
-        <nav class="navbar" aria-label="주요 메뉴">
+<header class="site-header">
+    <div class="container">
+        <a href="#home" class="logo">SECURITY PORTFOLIO</a>
 
-            <a href="#home" class="logo">
-                Security Portfolio
+        <nav>
+            <a href="#home">소개</a>
+            <a href="#projects">활동</a>
+            <a href="#evidence">근거</a>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+
+    <!-- INTRO -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+
+            <p class="eyebrow">
+                NETWORK · WEB SECURITY
+            </p>
+
+            <h1>
+                Security<br>
+                Portfolio
+            </h1>
+
+            <p class="hero-text">
+                안녕하세요. 김소윤입니다.<br>
+                네트워크와 웹 보안을 공부하며
+                직접 실습하고 문제를 해결합니다.
+            </p>
+
+
+            <!-- 소개 / 활동 / 근거 -->
+            <div class="hero-summary">
+
+                <article class="summary-item">
+                    <span>소개</span>
+
+                    <strong>
+                        Security Learner
+                    </strong>
+
+                    <p>
+                        보안 기술을 배우고 직접 실습하며
+                        경험을 쌓고 있습니다.
+                    </p>
+                </article>
+
+
+                <article class="summary-item">
+                    <span>활동</span>
+
+                    <strong>
+                        Network · Web Security
+                    </strong>
+
+                    <p>
+                        웹 취약점, 네트워크 구성과
+                        보안 실습을 진행했습니다.
+                    </p>
+                </article>
+
+
+                <article class="summary-item">
+                    <span>근거</span>
+
+                    <strong>
+                        Hands-on Practice
+                    </strong>
+
+                    <p>
+                        Burp Suite, Wireshark, GNS3,
+                        Packet Tracer 등을 활용했습니다.
+                    </p>
+                </article>
+
+            </div>
+
+
+            <a href="#projects" class="primary-button">
+                프로젝트 보기
             </a>
 
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+        </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+        <div class="container">
+
+            <p class="eyebrow">
+                PROJECTS
+            </p>
+
+            <h2>
+                Security Practice
+            </h2>
+
+            <div class="project-grid">
+
+                <article class="project-card">
+                    <h3>Web Security</h3>
+
+                    <p>
+                        Burp Suite와 bWAPP, OWASP 기반
+                        웹 취약점 실습을 진행했습니다.
+                    </p>
+                </article>
+
+
+                <article class="project-card">
+                    <h3>Network Security</h3>
+
+                    <p>
+                        Packet Tracer와 GNS3를 활용해
+                        네트워크 구성과 라우팅을 실습했습니다.
+                    </p>
+                </article>
+
+
+                <article class="project-card">
+                    <h3>Packet Analysis</h3>
+
+                    <p>
+                        Wireshark를 활용하여
+                        네트워크 패킷과 프로토콜을 분석했습니다.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- EVIDENCE -->
+    <section id="evidence" class="section">
+        <div class="container">
+
+            <p class="eyebrow">
+                EVIDENCE
+            </p>
+
+            <h2>
+                Hands-on Practice
+            </h2>
+
+            <p class="section-text">
+                단순히 이론을 공부하는 것에 그치지 않고
+                직접 환경을 구성하고 실습하며 문제를 해결했습니다.
+            </p>
+
+            <ul class="evidence-list">
+                <li>Burp Suite</li>
+                <li>Wireshark</li>
+                <li>GNS3</li>
+                <li>Packet Tracer</li>
+                <li>Linux</li>
             </ul>
 
-        </nav>
-    </header>
+        </div>
+    </section>
 
+</main>
 
-    <!-- Home -->
-    <main>
 
-        <section id="home" class="hero">
-
-            <div class="hero-content">
-
-                <p class="eyebrow">
-                    NETWORK · WEB SECURITY
-                </p>
-
-                <h1>
-                    Security<br>
-                    Portfolio
-                </h1>
-
-                <p class="hero-text">
-                    안녕하세요. 김소윤입니다.<br>
-                    네트워크와 웹 보안을 공부하며 직접 실습하고 문제를 해결합니다.
-                </p>
-
-
-                <!-- 소개 / 활동 / 근거 -->
-                <div class="hero-summary">
-
-                    <div class="summary-item">
-                        <span>소개</span>
-
-                        <strong>
-                            Security Learner
-                        </strong>
-
-                        <p>
-                            보안 기술을 배우고 직접 실습하며
-                            경험을 쌓고 있습니다.
-                        </p>
-                    </div>
-
-
-                    <div class="summary-item">
-                        <span>활동</span>
-
-                        <strong>
-                            Network · Web Security
-                        </strong>
-
-                        <p>
-                            웹 취약점, 네트워크 구성과
-                            보안 실습을 진행했습니다.
-                        </p>
-                    </div>
-
-
-                    <div class="summary-item">
-                        <span>근거</span>
-
-                        <strong>
-                            Hands-on Practice
-                        </strong>
-
-                        <p>
-                            Burp Suite, Wireshark, GNS3,
-                            Packet Tracer 등을 활용했습니다.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <a href="#projects" class="primary-button">
-                    프로젝트 보기
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- About -->
-        <section id="about" class="section">
-
-            <div class="container">
-
-                <p class="section-label">
-                    ABOUT
-                </p>
-
-                <h2>
-                    About Me
-                </h2>
-
-                <p>
-                    네트워크와 웹 보안 분야를 공부하고 있습니다.
-                    다양한 보안 실습 환경을 구축하고,
-                    직접 문제를 해결하면서 경험을 쌓고 있습니다.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- Projects -->
-        <section id="projects" class="section projects-section">
-
-            <div class="container">
-
-                <p class="section-label">
-                    PROJECTS
-                </p>
-
-                <h2>
-                    Security Projects
-                </h2>
-
-
-                <div class="project-grid">
-
-                    <article class="project-card">
-
-                        <span class="project-number">
-                            01
-                        </span>
-
-                        <h3>
-                            Web Security
-                        </h3>
-
-                        <p>
-                            OWASP Top 10을 기반으로
-                            웹 취약점을 학습하고 실습했습니다.
-                        </p>
-
-                        <div class="tags">
-                            <span>Burp Suite</span>
-                            <span>OWASP</span>
-                            <span>DVWA</span>
-                        </div>
-
-                    </article>
-
-
-                    <article class="project-card">
-
-                        <span class="project-number">
-                            02
-                        </span>
-
-                        <h3>
-                            Network Security
-                        </h3>
-
-                        <p>
-                            네트워크 구성과 라우팅,
-                            VLAN 및 DHCP 등을 실습했습니다.
-                        </p>
-
-                        <div class="tags">
-                            <span>Packet Tracer</span>
-                            <span>GNS3</span>
-                            <span>Cisco</span>
-                        </div>
-
-                    </article>
-
-
-                    <article class="project-card">
-
-                        <span class="project-number">
-                            03
-                        </span>
-
-                        <h3>
-                            Security Lab
-                        </h3>
-
-                        <p>
-                            Linux와 가상 환경을 이용하여
-                            다양한 보안 실습 환경을 구축했습니다.
-                        </p>
-
-                        <div class="tags">
-                            <span>Linux</span>
-                            <span>Kali</span>
-                            <span>VMware</span>
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- Skills -->
-        <section id="skills" class="section">
-
-            <div class="container">
-
-                <p class="section-label">
-                    SKILLS
-                </p>
-
-                <h2>
-                    Skills & Tools
-                </h2>
-
-                <div class="skills">
-
-                    <span>Linux</span>
-                    <span>Burp Suite</span>
-                    <span>Wireshark</span>
-                    <span>GNS3</span>
-                    <span>Packet Tracer</span>
-                    <span>VMware</span>
-                    <span>GitHub</span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- Contact -->
-        <section id="contact" class="section contact-section">
-
-            <div class="container">
-
-                <p class="section-label">
-                    CONTACT
-                </p>
-
-                <h2>
-                    Contact
-                </h2>
-
-                <p>
-                    보안 공부와 프로젝트를 지속적으로 기록하고 있습니다.
-                </p>
-
-                <a
-                    href="https://github.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="github-button">
-                    GitHub
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <p>
-            © 2026 Security Portfolio
-        </p>
-
-    </footer>
+<footer>
+    <div class="container">
+        <p>NETWORK · WEB SECURITY</p>
+        <p>Security Portfolio</p>
+    </div>
+</footer>
 
 
 </body>
-
 </html>
