@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>김소윤 | Security Portfolio</title>
+    <title>Soyoon | Security Portfolio</title>
 
     <style>
         * {
@@ -19,14 +19,10 @@
         }
 
         body {
-            font-family:
-                Arial,
-                "Noto Sans KR",
-                sans-serif;
-
+            font-family: Arial, "Noto Sans KR", sans-serif;
             background: #f7f7f5;
             color: #222;
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
         a {
@@ -40,15 +36,14 @@
             top: 0;
             z-index: 100;
 
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.96);
             border-bottom: 1px solid #ddd;
         }
 
         nav {
             max-width: 1100px;
             margin: 0 auto;
-
-            padding: 18px 24px;
+            padding: 16px 24px;
 
             display: flex;
             justify-content: space-between;
@@ -68,7 +63,6 @@
         .nav-links a {
             text-decoration: none;
             font-size: 14px;
-            color: #444;
         }
 
         .nav-links a:hover,
@@ -76,25 +70,32 @@
             text-decoration: underline;
         }
 
-        /* Hero */
+
+        /* First Screen */
 
         .hero {
             max-width: 1100px;
-            min-height: 75vh;
+            min-height: calc(100vh - 65px);
 
             margin: 0 auto;
-            padding: 110px 24px 80px;
+            padding: 55px 24px;
 
             display: flex;
             align-items: center;
         }
 
-        .hero-content {
-            max-width: 780px;
+        .hero-grid {
+            width: 100%;
+
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+
+            align-items: center;
         }
 
         .eyebrow {
-            margin-bottom: 20px;
+            margin-bottom: 14px;
 
             font-size: 13px;
             font-weight: 700;
@@ -104,24 +105,24 @@
         }
 
         h1 {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
 
-            font-size: clamp(48px, 8vw, 88px);
+            font-size: clamp(48px, 6vw, 76px);
             line-height: 1.05;
         }
 
         .hero-description {
-            max-width: 680px;
+            max-width: 560px;
 
-            font-size: 20px;
+            font-size: 18px;
             color: #555;
         }
 
         .hero-button {
             display: inline-block;
 
-            margin-top: 32px;
-            padding: 12px 22px;
+            margin-top: 22px;
+            padding: 10px 18px;
 
             background: #222;
             color: white;
@@ -135,17 +136,54 @@
             background: #444;
         }
 
-        /* Common Section */
+
+        /* Evidence */
+
+        .evidence-box {
+            padding: 28px;
+
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 14px;
+        }
+
+        .evidence-box h2 {
+            margin-bottom: 18px;
+
+            font-size: 24px;
+        }
+
+        .evidence-item {
+            padding: 14px 0;
+
+            border-bottom: 1px solid #eee;
+        }
+
+        .evidence-item:last-child {
+            border-bottom: none;
+        }
+
+        .evidence-title {
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .evidence-text {
+            color: #666;
+            font-size: 14px;
+        }
+
+
+        /* Common Sections */
 
         .section {
             max-width: 1100px;
             margin: 0 auto;
-
-            padding: 100px 24px;
+            padding: 90px 24px;
         }
 
         .section-label {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
 
             font-size: 13px;
             font-weight: 700;
@@ -155,66 +193,12 @@
         }
 
         h2 {
-            margin-bottom: 30px;
+            margin-bottom: 28px;
 
-            font-size: 42px;
+            font-size: 40px;
             line-height: 1.2;
         }
 
-        /* Purpose */
-
-        .purpose-box {
-            max-width: 800px;
-
-            padding: 30px;
-
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-        }
-
-        .purpose-box p {
-            font-size: 18px;
-        }
-
-        /* Public Scope */
-
-        .scope-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-
-            gap: 24px;
-            margin-top: 40px;
-        }
-
-        .scope-card {
-            padding: 30px;
-
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-        }
-
-        .scope-card.public {
-            border-top: 4px solid #222;
-        }
-
-        .scope-card.private {
-            border-top: 4px solid #aaa;
-        }
-
-        .scope-card h3 {
-            margin-bottom: 20px;
-            font-size: 22px;
-        }
-
-        .scope-card ul {
-            padding-left: 20px;
-        }
-
-        .scope-card li {
-            margin-bottom: 8px;
-        }
 
         /* About */
 
@@ -225,6 +209,45 @@
             color: #555;
         }
 
+
+        /* Strengths */
+
+        .strength-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .strength-card {
+            padding: 26px;
+
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+        }
+
+        .strength-card h3 {
+            margin-bottom: 18px;
+            font-size: 20px;
+        }
+
+        .strength-card div {
+            margin-bottom: 12px;
+        }
+
+        .strength-card strong {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .strength-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+
         /* Experience */
 
         .cards {
@@ -232,11 +255,11 @@
             grid-template-columns: repeat(3, 1fr);
 
             gap: 20px;
-            margin-top: 40px;
+            margin-top: 35px;
         }
 
         .card {
-            padding: 30px;
+            padding: 28px;
 
             background: white;
             border: 1px solid #ddd;
@@ -244,7 +267,7 @@
         }
 
         .card h3 {
-            margin-bottom: 15px;
+            margin-bottom: 14px;
             font-size: 20px;
         }
 
@@ -253,6 +276,38 @@
             font-size: 15px;
         }
 
+
+        /* Public Scope */
+
+        .scope-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 24px;
+            margin-top: 35px;
+        }
+
+        .scope-card {
+            padding: 28px;
+
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+        }
+
+        .scope-card h3 {
+            margin-bottom: 16px;
+        }
+
+        .scope-card ul {
+            padding-left: 20px;
+        }
+
+        .scope-card li {
+            margin-bottom: 8px;
+        }
+
+
         /* Skills */
 
         .skills {
@@ -260,7 +315,7 @@
             flex-wrap: wrap;
 
             gap: 10px;
-            margin-top: 30px;
+            margin-top: 25px;
         }
 
         .skill {
@@ -274,15 +329,6 @@
             font-size: 14px;
         }
 
-        /* Principles */
-
-        .principles {
-            max-width: 800px;
-        }
-
-        .principles li {
-            margin-bottom: 12px;
-        }
 
         /* Contact */
 
@@ -294,8 +340,7 @@
         .contact-inner {
             max-width: 1100px;
             margin: 0 auto;
-
-            padding: 100px 24px;
+            padding: 80px 24px;
         }
 
         .contact .section-label {
@@ -306,10 +351,11 @@
             color: #ddd;
         }
 
+
         /* Footer */
 
         footer {
-            padding: 30px 20px;
+            padding: 25px;
 
             background: #222;
             color: #888;
@@ -318,35 +364,45 @@
             font-size: 13px;
         }
 
-        /* Mobile */
 
-        @media (max-width: 700px) {
+        /* Responsive */
 
-            nav {
-                flex-direction: column;
-                gap: 15px;
+        @media (max-width: 800px) {
+
+            .hero {
+                min-height: auto;
+                padding: 70px 24px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .strength-grid,
+            .cards,
+            .scope-grid {
+                grid-template-columns: 1fr;
             }
 
             .nav-links {
-                gap: 14px;
+                gap: 12px;
             }
+        }
 
-            .hero {
-                min-height: 70vh;
-                padding-top: 80px;
+        @media (max-width: 500px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
             }
 
             h1 {
-                font-size: 52px;
+                font-size: 48px;
             }
 
             h2 {
-                font-size: 34px;
-            }
-
-            .scope-grid,
-            .cards {
-                grid-template-columns: 1fr;
+                font-size: 32px;
             }
         }
     </style>
@@ -358,6 +414,7 @@
     <!-- Navigation -->
 
     <header>
+
         <nav>
 
             <div class="logo">
@@ -366,88 +423,116 @@
 
             <div class="nav-links">
 
-                <a href="#about">
-                    About
-                </a>
-
-                <a href="#scope">
-                    공개 범위
-                </a>
-
-                <a href="#experience">
-                    Experience
-                </a>
-
-                <a href="#skills">
-                    Skills
-                </a>
+                <a href="#about">About</a>
+                <a href="#strengths">Strengths</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
 
             </div>
 
         </nav>
+
     </header>
 
 
     <main>
 
-        <!-- Hero -->
+
+        <!-- FIRST SCREEN -->
 
         <section class="hero">
 
-            <div class="hero-content">
+            <div class="hero-grid">
 
-                <p class="eyebrow">
-                    NETWORK · WEB SECURITY
-                </p>
 
-                <h1>
-                    Hello,<br>
-                    I'm Soyoon.
-                </h1>
+                <!-- Introduction -->
 
-                <p class="hero-description">
-                    네트워크와 웹 보안을 공부하며
-                    직접 실습하고 기록하는 사람입니다.
-                </p>
+                <div>
 
-                <a
-                    class="hero-button"
-                    href="#about"
-                >
-                    나를 알아보기
-                </a>
+                    <p class="eyebrow">
+                        NETWORK · WEB SECURITY
+                    </p>
+
+                    <h1>
+                        Hello,<br>
+                        I'm Soyoon.
+                    </h1>
+
+                    <p class="hero-description">
+                        네트워크와 웹 보안을 공부하며
+                        직접 실습하고 기록하는 사람입니다.
+                        모르는 문제를 끝까지 이해하고
+                        직접 해결하는 과정을 중요하게 생각합니다.
+                    </p>
+
+                    <a
+                        href="#about"
+                        class="hero-button"
+                    >
+                        더 알아보기
+                    </a>
+
+                </div>
+
+
+                <!-- Evidence -->
+
+                <div class="evidence-box">
+
+                    <h2>
+                        My Evidence
+                    </h2>
+
+
+                    <div class="evidence-item">
+
+                        <p class="evidence-title">
+                            Network Practice
+                        </p>
+
+                        <p class="evidence-text">
+                            Packet Tracer와 GNS3를 활용하여
+                            VLAN, DHCP, NAT, Routing 등을 실습했습니다.
+                        </p>
+
+                    </div>
+
+
+                    <div class="evidence-item">
+
+                        <p class="evidence-title">
+                            Web Security Practice
+                        </p>
+
+                        <p class="evidence-text">
+                            OWASP 기반으로 XSS, SQL Injection,
+                            CSRF, IDOR 등의 취약점을 학습했습니다.
+                        </p>
+
+                    </div>
+
+
+                    <div class="evidence-item">
+
+                        <p class="evidence-title">
+                            Security Lab
+                        </p>
+
+                        <p class="evidence-text">
+                            Linux, Kali Linux, VMware 등을 이용해
+                            보안 실습 환경을 구성했습니다.
+                        </p>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- Purpose -->
-
-        <section class="section">
-
-            <p class="section-label">
-                PURPOSE
-            </p>
-
-            <h2>
-                이 페이지의 목적
-            </h2>
-
-            <div class="purpose-box">
-
-                <p>
-                    이 페이지는 보안 분야에 관심이 있는 사람에게
-                    제가 어떤 분야를 공부하고 어떤 경험을 쌓고 있는지
-                    보여주기 위한 공개 개인 페이지입니다.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- About -->
+        <!-- ABOUT -->
 
         <section
             id="about"
@@ -471,12 +556,252 @@
         </section>
 
 
-        <!-- Public Scope -->
+        <!-- STRENGTHS -->
 
         <section
-            id="scope"
+            id="strengths"
             class="section"
         >
+
+            <p class="section-label">
+                MY STRENGTHS
+            </p>
+
+            <h2>
+                Situation · Action · Result
+            </h2>
+
+
+            <div class="strength-grid">
+
+
+                <!-- Strength 1 -->
+
+                <article class="strength-card">
+
+                    <h3>
+                        끈기와 꾸준함
+                    </h3>
+
+                    <div>
+
+                        <strong>
+                            상황
+                        </strong>
+
+                        <p>
+                            네트워크와 보안 공부 중
+                            이해하기 어려운 내용이 자주 나왔습니다.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            행동
+                        </strong>
+
+                        <p>
+                            바로 넘어가지 않고 직접 설정해보고
+                            원인을 하나씩 확인했습니다.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            결과
+                        </strong>
+
+                        <p>
+                            네트워크 설정 과정을 직접 구성하고
+                            문제를 해결하는 경험을 쌓았습니다.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Strength 2 -->
+
+                <article class="strength-card">
+
+                    <h3>
+                        문제 해결
+                    </h3>
+
+                    <div>
+
+                        <strong>
+                            상황
+                        </strong>
+
+                        <p>
+                            GNS3와 Packet Tracer 실습에서
+                            통신이 되지 않는 문제가 발생했습니다.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            행동
+                        </strong>
+
+                        <p>
+                            IP 주소, 인터페이스, 라우팅 설정을
+                            순서대로 확인했습니다.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            결과
+                        </strong>
+
+                        <p>
+                            설정 오류를 찾아 수정하고
+                            Ping으로 통신을 확인했습니다.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Strength 3 -->
+
+                <article class="strength-card">
+
+                    <h3>
+                        끝까지 이해하기
+                    </h3>
+
+                    <div>
+
+                        <strong>
+                            상황
+                        </strong>
+
+                        <p>
+                            CCNA 문제를 공부하면서
+                            단순 암기로 이해하기 어려운 문제가 있었습니다.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            행동
+                        </strong>
+
+                        <p>
+                            정답의 이유와 오답이 틀린 이유를
+                            비교하며 직접 정리했습니다.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            결과
+                        </strong>
+
+                        <p>
+                            DHCP Relay, PortFast, VLAN, IPv6 등의
+                            개념을 문제와 연결해 이해할 수 있게 되었습니다.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXPERIENCE -->
+
+        <section
+            id="experience"
+            class="section"
+        >
+
+            <p class="section-label">
+                EXPERIENCE
+            </p>
+
+            <h2>
+                Security Practice
+            </h2>
+
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>
+                        Web Security
+                    </h3>
+
+                    <p>
+                        OWASP Top 10을 기반으로
+                        웹 취약점을 학습하고 실습했습니다.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>
+                        Network
+                    </h3>
+
+                    <p>
+                        VLAN, DHCP, NAT, Routing 등을
+                        Packet Tracer와 GNS3로 실습했습니다.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>
+                        Security Lab
+                    </h3>
+
+                    <p>
+                        Linux, Kali Linux, VMware 등을 이용해
+                        보안 실습 환경을 구성했습니다.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- PUBLIC SCOPE -->
+
+        <section class="section">
 
             <p class="section-label">
                 PUBLIC SCOPE
@@ -486,11 +811,11 @@
                 공개 범위
             </h2>
 
+
             <div class="scope-grid">
 
-                <!-- Public -->
 
-                <div class="scope-card public">
+                <div class="scope-card">
 
                     <h3>
                         공개하는 정보
@@ -515,9 +840,7 @@
                 </div>
 
 
-                <!-- Private -->
-
-                <div class="scope-card private">
+                <div class="scope-card">
 
                     <h3>
                         공개하지 않는 정보
@@ -534,7 +857,7 @@
                         </li>
 
                         <li>
-                            계정 비밀번호, 인증정보 및 비밀값
+                            계정 비밀번호와 인증정보
                         </li>
 
                     </ul>
@@ -546,73 +869,7 @@
         </section>
 
 
-        <!-- Experience -->
-
-        <section
-            id="experience"
-            class="section"
-        >
-
-            <p class="section-label">
-                EXPERIENCE
-            </p>
-
-            <h2>
-                What I've Done
-            </h2>
-
-            <div class="cards">
-
-                <article class="card">
-
-                    <h3>
-                        Web Security
-                    </h3>
-
-                    <p>
-                        OWASP Top 10을 기반으로
-                        XSS, SQL Injection, CSRF, IDOR 등의
-                        웹 취약점을 학습하고 실습했습니다.
-                    </p>
-
-                </article>
-
-
-                <article class="card">
-
-                    <h3>
-                        Network
-                    </h3>
-
-                    <p>
-                        VLAN, DHCP, NAT, Routing 등을 학습하고
-                        Packet Tracer와 GNS3를 이용하여
-                        네트워크 구성을 실습했습니다.
-                    </p>
-
-                </article>
-
-
-                <article class="card">
-
-                    <h3>
-                        Security Lab
-                    </h3>
-
-                    <p>
-                        Linux, Kali Linux, VMware 등의 환경에서
-                        보안 실습 환경을 구성하고
-                        문제를 직접 해결했습니다.
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- Skills -->
+        <!-- SKILLS -->
 
         <section
             id="skills"
@@ -624,80 +881,27 @@
             </p>
 
             <h2>
-                Tools & Skills
+                Tools
             </h2>
+
 
             <div class="skills">
 
-                <span class="skill">
-                    Linux
-                </span>
-
-                <span class="skill">
-                    Kali Linux
-                </span>
-
-                <span class="skill">
-                    Burp Suite
-                </span>
-
-                <span class="skill">
-                    Wireshark
-                </span>
-
-                <span class="skill">
-                    GNS3
-                </span>
-
-                <span class="skill">
-                    Packet Tracer
-                </span>
-
-                <span class="skill">
-                    VMware
-                </span>
-
-                <span class="skill">
-                    GitHub
-                </span>
+                <span class="skill">Linux</span>
+                <span class="skill">Kali Linux</span>
+                <span class="skill">Burp Suite</span>
+                <span class="skill">Wireshark</span>
+                <span class="skill">GNS3</span>
+                <span class="skill">Packet Tracer</span>
+                <span class="skill">VMware</span>
+                <span class="skill">GitHub</span>
 
             </div>
 
         </section>
 
 
-        <!-- Learning Principles -->
-
-        <section class="section">
-
-            <p class="section-label">
-                PRINCIPLES
-            </p>
-
-            <h2>
-                How I Learn
-            </h2>
-
-            <ul class="principles">
-
-                <li>
-                    모르는 내용은 그냥 넘어가지 않고 끝까지 이해하려고 합니다.
-                </li>
-
-                <li>
-                    직접 실습하면서 발생한 문제와 해결 과정을 기록합니다.
-                </li>
-
-                <li>
-                    보안 기술을 학습할 때 안전한 환경과 윤리적인 사용을 중요하게 생각합니다.
-                </li>
-
-            </ul>
-
-        </section>
-
-
-        <!-- Contact -->
+        <!-- CONTACT -->
 
         <section class="contact">
 
@@ -719,6 +923,7 @@
 
         </section>
 
+
     </main>
 
 
@@ -727,6 +932,7 @@
         © 2026 Soyoon · Security Learning Portfolio
 
     </footer>
+
 
 </body>
 
