@@ -14,21 +14,71 @@ body {
     margin: 0;
     background: #0b1117;
     color: #eef2f5;
+
     font-family:
-        "Pretendard",
-        "Noto Sans KR",
         Arial,
+        "Noto Sans KR",
         sans-serif;
+
     line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 a {
     color: inherit;
+    text-decoration: none;
 }
 
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================
+   공통
+========================= */
+
 .container {
-    width: min(1100px, calc(100% - 48px));
+    width: min(1120px, calc(100% - 48px));
     margin: 0 auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-dark {
+    background: #101a23;
+}
+
+.section-label {
+    margin: 0 0 16px;
+
+    color: #9daab5;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+}
+
+h1,
+h2,
+h3,
+p {
+    overflow-wrap: break-word;
+}
+
+h2 {
+    margin: 0 0 40px;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.15;
 }
 
 
@@ -39,44 +89,44 @@ a {
 .site-header {
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
 
-    border-bottom: 1px solid #26323c;
+    border-bottom: 1px solid #25323d;
 
-    background: rgba(11, 17, 23, 0.92);
-    backdrop-filter: blur(10px);
+    background: rgba(11, 17, 23, 0.96);
 }
 
-.header-inner {
-    min-height: 68px;
+.nav-container {
+    min-height: 72px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    gap: 24px;
 }
 
 .logo {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 800;
     letter-spacing: 0.08em;
-
-    text-decoration: none;
 }
 
-.nav {
+nav {
     display: flex;
-    gap: 28px;
+    gap: 24px;
 }
 
-.nav a {
+nav a {
+    padding: 8px 4px;
+
+    color: #cbd4da;
+
     font-size: 0.9rem;
-    color: #aeb9c3;
-    text-decoration: none;
-
-    transition: color 0.2s ease;
 }
 
-.nav a:hover {
+nav a:hover,
+nav a:focus-visible {
     color: #ffffff;
 }
 
@@ -86,55 +136,50 @@ a {
 ========================= */
 
 .hero {
-    min-height: calc(100vh - 68px);
+    min-height: calc(100vh - 72px);
 
     display: flex;
     align-items: center;
 
-    padding: 70px 0 90px;
-
-    background:
-        radial-gradient(
-            circle at 80% 20%,
-            rgba(58, 82, 104, 0.18),
-            transparent 35%
-        );
+    padding: 80px 0;
 }
 
 .hero-content {
-    width: 100%;
+    max-width: 1000px;
 }
 
 .eyebrow {
     margin: 0 0 18px;
 
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.18em;
+    color: #9daab5;
 
-    color: #8fa1b1;
+    font-size: 0.82rem;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
 }
 
-h1 {
+.hero h1 {
     margin: 0 0 28px;
 
-    font-size: clamp(3.5rem, 8vw, 6.5rem);
+    font-size: clamp(3.6rem, 9vw, 7.5rem);
     line-height: 0.9;
-    letter-spacing: -0.06em;
+    letter-spacing: -0.05em;
 }
 
 .hero-text {
-    max-width: 650px;
+    max-width: 700px;
 
-    margin: 0;
+    margin: 0 0 42px;
 
-    font-size: 1.05rem;
-    color: #cbd5dc;
+    color: #cbd4da;
+
+    font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 
 /* =========================
-   INTRO / ACTIVITY / EVIDENCE
+   소개 / 활동 / 근거
 ========================= */
 
 .hero-summary {
@@ -148,44 +193,18 @@ h1 {
     width: 100%;
     max-width: 1000px;
 
-    margin: 42px 0 30px;
+    margin: 0 0 36px;
 }
 
 .summary-item {
     min-width: 0;
 
-    padding: 26px;
+    padding: 24px;
 
-    border: 1px solid #2d3a45;
-    border-radius: 14px;
+    border: 1px solid #33414c;
+    border-radius: 12px;
 
-    background:
-        linear-gradient(
-            145deg,
-            #17222c,
-            #101820
-        );
-
-    box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.18);
-
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        background 0.2s ease;
-}
-
-.summary-item:hover {
-    transform: translateY(-5px);
-
-    border-color: #64788a;
-
-    background:
-        linear-gradient(
-            145deg,
-            #1b2934,
-            #111c25
-        );
+    background: #131e27;
 }
 
 .summary-item span {
@@ -193,11 +212,12 @@ h1 {
 
     margin-bottom: 12px;
 
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.16em;
+    color: #9daab5;
 
-    color: #8fa1b1;
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
 }
 
 .summary-item strong {
@@ -206,71 +226,108 @@ h1 {
     margin-bottom: 10px;
 
     font-size: 1.05rem;
-
-    line-height: 1.4;
-
-    color: #ffffff;
 }
 
 .summary-item p {
     margin: 0;
 
-    font-size: 0.88rem;
-    line-height: 1.65;
+    color: #cbd4da;
 
-    color: #b9c5ce;
+    font-size: 0.9rem;
 }
 
 
 /* =========================
-   BUTTON
+   버튼
 ========================= */
 
-.primary-button {
+.primary-button,
+.secondary-button {
     display: inline-flex;
+
     align-items: center;
+    justify-content: center;
 
-    padding: 12px 20px;
+    min-height: 48px;
 
-    border: 1px solid #687b8b;
+    padding: 12px 22px;
+
     border-radius: 8px;
 
-    background: transparent;
+    font-weight: 800;
 
-    font-size: 0.9rem;
-    font-weight: 700;
-
-    color: #ffffff;
-
-    text-decoration: none;
+    cursor: pointer;
 
     transition:
-        background 0.2s ease,
-        transform 0.2s ease;
+        transform 0.2s ease,
+        background-color 0.2s ease;
 }
 
-.primary-button:hover {
-    background: #1d2b36;
+.primary-button {
+    background: #eef2f5;
+    color: #0b1117;
+}
+
+.primary-button:hover,
+.primary-button:focus-visible,
+.secondary-button:hover,
+.secondary-button:focus-visible {
     transform: translateY(-2px);
 }
 
+.primary-button:focus-visible,
+.secondary-button:focus-visible,
+nav a:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+.secondary-button {
+    border: 1px solid #71808c;
+
+    background: transparent;
+    color: #eef2f5;
+}
+
 
 /* =========================
-   PROJECT SECTION
+   ABOUT
 ========================= */
 
-.section {
-    padding: 100px 0;
+.about-grid {
+    display: grid;
 
-    border-top: 1px solid #202b34;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
 }
 
-.section h2 {
-    margin: 0 0 35px;
+.content-card {
+    padding: 28px;
 
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    line-height: 1.1;
+    border: 1px solid #33414c;
+    border-radius: 12px;
+
+    background: #101920;
 }
+
+.content-card h3 {
+    margin: 0 0 14px;
+
+    font-size: 1.2rem;
+}
+
+.content-card p {
+    margin: 0;
+
+    color: #cbd4da;
+}
+
+
+/* =========================
+   PROJECT
+========================= */
 
 .project-grid {
     display: grid;
@@ -278,37 +335,44 @@ h1 {
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
 
-    gap: 18px;
+    gap: 20px;
 }
 
 .project-card {
-    padding: 26px;
+    padding: 28px;
 
-    border: 1px solid #2d3a45;
+    border: 1px solid #33414c;
     border-radius: 12px;
 
-    background: #111a22;
+    background: #131e27;
+}
+
+.project-number {
+    margin: 0 0 12px;
+
+    color: #9daab5;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
 }
 
 .project-card h3 {
-    margin: 0 0 12px;
+    margin: 0 0 14px;
 
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 }
 
 .project-card p {
-    margin: 0;
-
-    font-size: 0.9rem;
-    line-height: 1.7;
-
-    color: #b9c5ce;
+    color: #cbd4da;
 }
 
-.section-text {
-    max-width: 700px;
+.project-card ul {
+    margin: 20px 0 0;
+    padding-left: 20px;
 
-    color: #b9c5ce;
+    color: #eef2f5;
 }
 
 
@@ -316,29 +380,77 @@ h1 {
    EVIDENCE
 ========================= */
 
-.evidence-list {
-    display: flex;
-    flex-wrap: wrap;
+.evidence-box {
+    padding: 36px;
 
-    gap: 12px;
+    border: 1px solid #33414c;
+    border-radius: 12px;
 
-    margin: 30px 0 0;
-    padding: 0;
-
-    list-style: none;
+    background: #101920;
 }
 
-.evidence-list li {
-    padding: 9px 15px;
+.evidence-box > p {
+    max-width: 700px;
 
-    border: 1px solid #354450;
+    margin: 0 0 28px;
+
+    color: #cbd4da;
+
+    font-size: 1.05rem;
+}
+
+.tool-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.tool-list span {
+    padding: 8px 12px;
+
+    border: 1px solid #53616d;
     border-radius: 999px;
 
-    background: #121d25;
-
     font-size: 0.85rem;
+}
 
-    color: #d6dfe5;
+
+/* =========================
+   INTERACTION
+========================= */
+
+.interaction-section {
+    padding-top: 40px;
+}
+
+.interaction-box {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding: 36px;
+
+    border: 1px solid #33414c;
+    border-radius: 12px;
+
+    background: #131e27;
+}
+
+.interaction-box h2 {
+    margin-bottom: 14px;
+
+    font-size: 2rem;
+}
+
+.interaction-box p {
+    margin: 0;
+
+    color: #cbd4da;
 }
 
 
@@ -346,90 +458,114 @@ h1 {
    FOOTER
 ========================= */
 
-footer {
-    padding: 40px 0;
+.site-footer {
+    padding: 32px 0;
 
-    border-top: 1px solid #202b34;
+    border-top: 1px solid #25323d;
 
-    color: #71808c;
-}
+    color: #8997a2;
 
-footer p {
-    margin: 4px 0;
-
-    font-size: 0.78rem;
+    font-size: 0.85rem;
 }
 
 
 /* =========================
-   TABLET
+   반응형
 ========================= */
 
 @media (max-width: 900px) {
 
     .hero-summary,
+    .about-grid,
     .project-grid {
         grid-template-columns: 1fr;
     }
 
     .hero {
-        padding-top: 60px;
+        min-height: auto;
+        padding: 80px 0;
+    }
+
+    .interaction-box {
+        align-items: flex-start;
+        flex-direction: column;
     }
 }
 
 
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 
     .container {
-        width: min(100% - 32px, 1100px);
+        width: min(100% - 32px, 700px);
     }
 
-    .header-inner {
-        min-height: 60px;
+    .nav-container {
+        min-height: 64px;
     }
 
-    .nav {
-        gap: 14px;
+    nav {
+        gap: 12px;
     }
 
-    .nav a {
-        font-size: 0.78rem;
-    }
-
-    .hero {
-        min-height: auto;
-        padding: 60px 0 70px;
-    }
-
-    h1 {
-        font-size: 3.5rem;
+    nav a {
+        font-size: 0.8rem;
     }
 
     .hero-summary {
-        gap: 14px;
-        margin-top: 32px;
-    }
-
-    .summary-item {
-        padding: 22px;
+        grid-template-columns: 1fr;
     }
 
     .section {
-        padding: 70px 0;
+        padding: 72px 0;
+    }
+}
+
+
+@media (max-width: 560px) {
+
+    .nav-container {
+        align-items: flex-start;
+        flex-direction: column;
+
+        padding: 16px 0;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .hero h1 {
+        font-size: 3.6rem;
+    }
+
+    .summary-item,
+    .content-card,
+    .project-card,
+    .evidence-box,
+    .interaction-box {
+        padding: 22px;
     }
 }
 
 
 /* =========================
-   가로 스크롤 방지
+   움직임 줄이기
+   T01-C22
 ========================= */
 
-html,
-body {
-    max-width: 100%;
-    overflow-x: hidden;
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
