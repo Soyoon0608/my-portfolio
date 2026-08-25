@@ -44,3 +44,13 @@
 
     color: #eef2f5;
 }
+
+
+/* 작은 화면에서 가로 넘침 방지 */
+@media (max-width: 800px) {
+
+    .hero-summary {
+        grid-template-columns: 1fr;
+    }
+
+}
